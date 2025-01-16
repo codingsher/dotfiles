@@ -104,7 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-# bind '"\C-S": "$(find . -type d | fzf)"'
 # Define a custom widget to change directories with fzf
 fzf_cd_widget() {
   local dir

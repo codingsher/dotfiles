@@ -115,6 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# bind '"\C-S": "$(find . -type d | fzf)"'
-
