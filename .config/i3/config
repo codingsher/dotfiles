@@ -195,6 +195,9 @@ bar {
         tray_output primary
 }
 
+# set background wallpaper
+exec_always --no-startup-id feh --bg-fill "/home/sher/Pictures/archBTW/arch4.jpg"
+
 # touch trackpad buttons on click
 # Enable tap-to-click
 exec --no-startup-id xinput set-prop "Your Trackpad Device Name" "libinput Tapping Enabled" 1
