@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "material"
+	color = color or "rose-pine-moon"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -34,6 +34,20 @@ return {
         name = "material",
         config = function()
             require('material').setup({
+                disable_background = true,
+                styles = {
+                    italic = false,
+                },
+            })
+
+            ColorMyPencils();
+        end
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        config = function()
+            require('catppuccin').setup({
                 disable_background = true,
                 styles = {
                     italic = false,

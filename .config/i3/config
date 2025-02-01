@@ -199,7 +199,7 @@ bar {
 }
 
 # set background wallpaper
-exec_always --no-startup-id feh --bg-fill "/home/sher/Pictures/archBTW/arch4.jpg"
+exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/arch6.jpg"
 
 # take screenshots
 bindsym --release $mod+z exec --no-startup-id "scrot -s '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots'"
@@ -217,3 +217,9 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 # Brightness down
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
+# picom
+# exec_always --no-startup-id picom &
+
+# lockscreen
+bindsym $mod+Shift+Q exec i3lock -n
+exec --no-startup-id xautolock -time 5 -locker "i3lock -n"

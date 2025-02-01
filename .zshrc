@@ -118,3 +118,32 @@ zle -N fzf_cd_widget
 # Bind Ctrl+S to the custom widget
 bindkey '^S' fzf_cd_widget
 
+# Define a custom widget to change directories with fzf
+fzf_cd_all_widget() {
+  local dir
+  dir=$(sudo find / -type d | fzf --exit-0) && sudo cd "$dir"
+
+  zle reset-prompt
+}
+
+# Register the widget with zsh
+zle -N fzf_cd_all_widget
+
+# Bind Ctrl+S to the custom widget
+bindkey '^A' fzf_cd_all_widget
+
+fzf_nvim_widget() {
+  local dir
+  dir=$(find ~/ | fzf --exit-0) && nvim "$dir"
+
+  zle reset-prompt
+}
+
+# Register the widget with zsh
+zle -N fzf_nvim_widget
+
+# Bind Ctrl+S to the custom widget
+bindkey '^N' fzf_nvim_widget
+
+export PATH="/home/sher/.flutter/flutter/bin:$PATH"
+
