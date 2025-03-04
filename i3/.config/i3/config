@@ -167,7 +167,7 @@ bar {
 }
 
 # set background wallpaper
-exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/galaxy.jpg"
+exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/image.jpg"
 
 # take screenshots
 bindsym --release $mod+z exec --no-startup-id "scrot -s '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots'"
