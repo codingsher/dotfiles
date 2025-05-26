@@ -117,3 +117,4 @@ if ! shopt -oq posix; then
 fi
 
 . "$HOME/.cargo/env"
+export PATH="$HOME/development/flutter/bin:$PATH"
