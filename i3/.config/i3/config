@@ -1,6 +1,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $fm DP1
+set $sm eDP1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -130,6 +132,19 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+
+# specifying i3 woorkspaces for dual monitors
+workspace 1 output $fm
+workspace 2 output $sm
+workspace 3 output $fm
+workspace 4 output $fm
+workspace 5 output $sm
+workspace 6 output $fm
+workspace 7 output $fm
+workspace 8 output $sm
+workspace 9 output $sm
+workspace 10 output $sm
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -191,3 +206,12 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 # lockscreen
 bindsym $mod+Shift+Q exec i3lock -n
 exec --no-startup-id xautolock -time 5 -locker "i3lock -n"
+
+# # for dual monitors
+# exec_always --no-startup-id xrandr --output DP1 --right-of eDP1 --auto
+# exec_always --no-startup-id xrandr --output DP1 --primary
+
+exec_always --no-startup-id sh -c 'xrandr | grep "DP1 connected" && \
+  xrandr --output DP1 --right-of eDP1 --auto && \
+  xrandr --output DP1 --primary'
+
