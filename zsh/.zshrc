@@ -145,5 +145,3 @@ zle -N fzf_nvim_widget
 # Bind Ctrl+S to the custom widget
 bindkey '^N' fzf_nvim_widget
 
-export PATH="/home/sher/development/flutter/bin:$PATH"
-export PATH="$HOME/development/flutter/bin:$PATH"
