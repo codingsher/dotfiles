@@ -176,10 +176,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # my own bar
-# bar {
-#         status_command i3status
-#         tray_output primary
-# }
+bar {
+        status_command i3status
+        tray_output primary
+}
 
 # set background wallpaper
 exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/image1.jpeg"
@@ -216,4 +216,4 @@ exec_always --no-startup-id sh -c 'xrandr | grep "DP1 connected" && \
   xrandr --output DP1 --primary'
 
 # polybar setup
-exec_always --no-startup-id sh -c "killall -q polybar; polybar top &"
+# exec_always --no-startup-id sh -c "killall -q polybar; polybar top &"
