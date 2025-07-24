@@ -145,3 +145,7 @@ zle -N fzf_nvim_widget
 # Bind Ctrl+S to the custom widget
 bindkey '^N' fzf_nvim_widget
 
+# opencode
+export PATH=/home/sher/.opencode/bin:$PATH
+
+alias vim='nvim'
