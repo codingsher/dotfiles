@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine"
+	color = color or "gruvbox"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -55,6 +55,18 @@ return {
             })
 
             ColorMyPencils();
+        end
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
+        name = "gruvbox",
+        config = function ()
+            require('gruvbox').setup({
+                disaabled_background = true,
+                styles = {
+                    ilatic = false,
+                }
+            })
         end
     }
 }
