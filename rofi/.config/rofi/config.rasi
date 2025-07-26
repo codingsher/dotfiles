@@ -1,0 +1,82 @@
+* {
+  bg:          #282828;
+  bg-alt:      #3c3836;
+  fg:          #ebdbb2;
+  selected:    #504945;
+  active:      #d79921;
+  urgent:      #cc241d;
+  border:      #665c54;
+  scrollbar:   #a89984;
+
+  font: "monospace 10";
+}
+
+window {
+  background-color: @bg;
+  border: 2px;
+  border-color: @border;
+  padding: 10px;
+}
+
+mainbox {
+  background-color: @bg;
+}
+
+inputbar {
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+textbox-prompt-colon {
+  text-color: @active;
+}
+
+listview {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @selected;
+  text-color: @fg;
+}
+
+element urgent {
+  background-color: @urgent;
+  text-color: #fbf1c7;
+}
+
+element active {
+  background-color: @active;
+  text-color: #282828;
+}
+
+scrollbar {
+  handle-color: @scrollbar;
+  handle-width: 5px;
+}
+
+message {
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+textbox {
+  text-color: @active;
+}
+
+button {
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+button selected {
+  background-color: @selected;
+  text-color: @fg;
+}
+
