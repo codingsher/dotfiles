@@ -175,35 +175,35 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# gruv-box colouring
-# Gruvbox dark color palette
+# rose-pine-moon colouring
 # Format: border background text indicator child_border
-client.focused          #d79921 #282828 #fbf1c7 #d79921 #282828
-client.focused_inactive #504945 #282828 #bdae93 #504945 #282828
-client.unfocused        #3c3836 #282828 #928374 #3c3836 #282828
-client.urgent           #cc241d #282828 #fbf1c7 #cc241d #282828
-client.placeholder      #282828 #282828 #fbf1c7 #282828 #282828
+client.focused          #f6c177 #232136 #e0def4 #f6c177 #232136
+client.focused_inactive #393552 #232136 #908caa #393552 #232136
+client.unfocused        #2a273f #232136 #6e6a86 #2a273f #232136
+client.urgent           #eb6f92 #232136 #e0def4 #eb6f92 #232136
+client.placeholder      #232136 #232136 #e0def4 #232136 #232136
+
 
 
 # my own bar
 bar {
-        status_command i3status
-        tray_output primary
+    status_command i3status
+    tray_output primary
 
-        colors {
-        background #282828
-        statusline #ebdbb2
-        separator  #928374
+    colors {
+        background #232136
+        statusline #e0def4
+        separator  #6e6a86
 
-        focused_workspace  #d79921 #d79921 #282828
-        active_workspace   #458588 #458588 #282828
-        inactive_workspace #3c3836 #3c3836 #ebdbb2
-        urgent_workspace   #cc241d #cc241d #fbf1c7
+        focused_workspace  #f4a491 #f4a491 #232136
+        active_workspace   #9ccfd8 #9ccfd8 #232136
+        inactive_workspace #2a273f #2a273f #e0def4
+        urgent_workspace   #eb6f92 #eb6f92 #e0def4
     }
 }
 
 # set background wallpaper
-exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/image.png"
+exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/dracula.png"
 
 # take screenshots
 bindsym --release $mod+z exec --no-startup-id "scrot -s '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots'"

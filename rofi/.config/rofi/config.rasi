@@ -1,12 +1,13 @@
 * {
-  bg:          #282828;
-  bg-alt:      #3c3836;
-  fg:          #ebdbb2;
-  selected:    #504945;
-  active:      #d79921;
-  urgent:      #cc241d;
-  border:      #665c54;
-  scrollbar:   #a89984;
+  bg:          #232136;
+  bg-alt:      #2a273f;
+  fg:          #e0def4;
+  selected:    #393552;
+  active:      #f6c177;
+  urgent:      #eb6f92;
+  border:      #6e6a86;
+  scrollbar:   #908caa;
+  peach:       #f4a491;
 
   font: "monospace 10";
 }
@@ -24,11 +25,11 @@ mainbox {
 
 inputbar {
   background-color: @bg-alt;
-  text-color: @fg;
+  text-color: @peach;
 }
 
 textbox-prompt-colon {
-  text-color: @active;
+  text-color: @peach;
 }
 
 listview {
@@ -48,12 +49,12 @@ element selected {
 
 element urgent {
   background-color: @urgent;
-  text-color: #fbf1c7;
+  text-color: #e0def4;
 }
 
 element active {
   background-color: @active;
-  text-color: #282828;
+  text-color: #232136;
 }
 
 scrollbar {
@@ -67,7 +68,7 @@ message {
 }
 
 textbox {
-  text-color: @active;
+  text-color: @peach;
 }
 
 button {
