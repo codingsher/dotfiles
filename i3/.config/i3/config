@@ -1,8 +1,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
-set $fm DP-1
-set $sm eDP-1
+set $sm DP-1
+set $fm eDP-1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -175,38 +175,40 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# rose-pine-moon colouring
-# Format: border background text indicator child_border
-client.focused          #f6c177 #232136 #e0def4 #f6c177 #232136
-client.focused_inactive #393552 #232136 #908caa #393552 #232136
-client.unfocused        #2a273f #232136 #6e6a86 #2a273f #232136
-client.urgent           #eb6f92 #232136 #e0def4 #eb6f92 #232136
-client.placeholder      #232136 #232136 #e0def4 #232136 #232136
-
-
+# # rose-pine-moon colouring
+# # Format: border background text indicator child_border
+# client.focused          #f6c177 #232136 #e0def4 #f6c177 #232136
+# client.focused_inactive #393552 #232136 #908caa #393552 #232136
+# client.unfocused        #2a273f #232136 #6e6a86 #2a273f #232136
+# client.urgent           #eb6f92 #232136 #e0def4 #eb6f92 #232136
+# client.placeholder      #232136 #232136 #e0def4 #232136 #232136
 
 # my own bar
 bar {
     status_command i3status
     tray_output primary
 
-    colors {
-        background #232136
-        statusline #e0def4
-        separator  #6e6a86
-
-        focused_workspace  #f4a491 #f4a491 #232136
-        active_workspace   #9ccfd8 #9ccfd8 #232136
-        inactive_workspace #2a273f #2a273f #e0def4
-        urgent_workspace   #eb6f92 #eb6f92 #e0def4
-    }
+    # colors {
+    #     background #232136
+    #     statusline #e0def4
+    #     separator  #6e6a86
+    #
+    #     focused_workspace  #f4a491 #f4a491 #232136
+    #     active_workspace   #9ccfd8 #9ccfd8 #232136
+    #     inactive_workspace #2a273f #2a273f #e0def4
+    #     urgent_workspace   #eb6f92 #eb6f92 #e0def4
+    # }
 }
 
 # set background wallpaper
-exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/dracula.png"
+exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/city2.jpg"
+
+# enabling greenclip daemon before screenshot so that screenshot get's copied to the clipboard
+exec_always --no-startup-id greenclip daemon
 
 # take screenshots
-bindsym --release $mod+z exec --no-startup-id "scrot -s '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots'"
+bindsym --release $mod+z exec --no-startup-id "escrotum -s '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots'"
+bindsym --release $mod+m exec --no-startup-id "rofi -modi clipboard:'greenclip print' -show clipboard -run-command '{cmd}'"
 
 # touch trackpad buttons on click
 # Enable tap-to-click
@@ -222,14 +224,14 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # picom
-exec_always --no-startup-id picom &
+# exec_always --no-startup-id picom &
 
 # lockscreen
 bindsym $mod+Shift+Q exec i3lock -n
 exec --no-startup-id xautolock -time 5 -locker "i3lock -n"
 
 exec_always --no-startup-id sh -c 'xrandr | grep "DP-1 connected" && \
-  xrandr --output DP-1 --right-of eDP-1 --auto && \
+  xrandr --output DP-1 --above eDP-1 --auto && \
   xrandr --output DP-1 --primary'
 
 # # polybar setup

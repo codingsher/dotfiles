@@ -114,8 +114,6 @@ fzf_cd_widget() {
 
 # Register the widget with zsh
 zle -N fzf_cd_widget
-
-# Bind Ctrl+S to the custom widget
 bindkey '^S' fzf_cd_widget
 
 # Define a custom widget to change directories with fzf
@@ -128,8 +126,6 @@ fzf_cd_all_widget() {
 
 # Register the widget with zsh
 zle -N fzf_cd_all_widget
-
-# Bind Ctrl+S to the custom widget
 bindkey '^A' fzf_cd_all_widget
 
 fzf_nvim_widget() {
@@ -141,11 +137,21 @@ fzf_nvim_widget() {
 
 # Register the widget with zsh
 zle -N fzf_nvim_widget
-
-# Bind Ctrl+S to the custom widget
 bindkey '^N' fzf_nvim_widget
 
-# opencode
-export PATH=/home/sher/.opencode/bin:$PATH
-
 alias vim='nvim'
+
+function greenclip() {
+  if [[ "$1" == "clear" ]]; then
+    echo "Stopping Greenclip..."
+    pkill greenclip 2>/dev/null
+    echo "Deleting history..."
+    rm -f ~/.cache/greenclip/history
+    echo "Restarting Greenclip..."
+    nohup greenclip daemon > /dev/null 2>&1 &
+    echo "Greenclip history cleared."
+  else
+    /usr/bin/greenclip "$@"
+  fi
+}
+
