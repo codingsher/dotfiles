@@ -94,5 +94,10 @@ return {
                 prefix = "",
             },
         })
+        require('lspconfig').clangd.setup({
+            cmd = { vim.fn.stdpath("data") .. "/mason/bin/clangd" },
+            capabilities = capabilities,
+            root_dir = require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+        })
     end
 }

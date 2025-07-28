@@ -2,16 +2,6 @@ require("sher.set")
 require("sher.remap")
 require("sher.lazy_init")
 
--- DO.not
--- DO NOT INCLUDE THIS
-
--- If i want to keep doing lsp debugging
--- function restart_htmx_lsp()
---     require("lsp-debug-tools").restart({ expected = {}, name = "htmx-lsp", cmd = { "htmx-lsp", "--level", "DEBUG" }, root_dir = vim.loop.cwd(), });
--- end
-
--- DO NOT INCLUDE THIS
--- DO.not
 
 local augroup = vim.api.nvim_create_augroup
 local SherGroup = augroup('Sher', {})
@@ -46,16 +36,16 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-autocmd('BufEnter', {
-    group = SherGroup,
-    callback = function()
-        if vim.bo.filetype == "zig" then
-            vim.cmd.colorscheme("tokyonight-night")
-        else
-            vim.cmd.colorscheme("rose-pine-moon")
-        end
-    end
-})
+-- autocmd('BufEnter', {
+--     group = SherGroup,
+--     callback = function()
+--         if vim.bo.filetype == "zig" then
+--             vim.cmd.colorscheme("tokyonight-night")
+--         else
+--             vim.cmd.colorscheme("catppuccin")
+--         end
+--     end
+-- })
 
 
 autocmd('LspAttach', {
