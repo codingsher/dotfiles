@@ -1,83 +1,87 @@
-* {
-  bg:          #232136;
-  bg-alt:      #2a273f;
-  fg:          #e0def4;
-  selected:    #393552;
-  active:      #f6c177;
-  urgent:      #eb6f92;
-  border:      #6e6a86;
-  scrollbar:   #908caa;
-  peach:       #f4a491;
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
 
-  font: "monospace 10";
-}
 
-window {
-  background-color: @bg;
-  border: 2px;
-  border-color: @border;
-  padding: 10px;
-}
 
-mainbox {
-  background-color: @bg;
-}
-
-inputbar {
-  background-color: @bg-alt;
-  text-color: @peach;
-}
-
-textbox-prompt-colon {
-  text-color: @peach;
-}
-
-listview {
-  background-color: @bg;
-  text-color: @fg;
-}
-
-element {
-  background-color: @bg;
-  text-color: @fg;
-}
-
-element selected {
-  background-color: @selected;
-  text-color: @fg;
-}
-
-element urgent {
-  background-color: @urgent;
-  text-color: #e0def4;
-}
-
-element active {
-  background-color: @active;
-  text-color: #232136;
-}
-
-scrollbar {
-  handle-color: @scrollbar;
-  handle-width: 5px;
-}
-
-message {
-  background-color: @bg-alt;
-  text-color: @fg;
-}
-
-textbox {
-  text-color: @peach;
-}
-
-button {
-  background-color: @bg-alt;
-  text-color: @fg;
-}
-
-button selected {
-  background-color: @selected;
-  text-color: @fg;
-}
-
+// * {
+//   bg:          #232136;
+//   bg-alt:      #2a273f;
+//   fg:          #e0def4;
+//   selected:    #393552;
+//   active:      #f6c177;
+//   urgent:      #eb6f92;
+//   border:      #6e6a86;
+//   scrollbar:   #908caa;
+//   peach:       #f4a491;
+//
+//   font: "monospace 10";
+// }
+//
+// window {
+//   background-color: @bg;
+//   border: 2px;
+//   border-color: @border;
+//   padding: 10px;
+// }
+//
+// mainbox {
+//   background-color: @bg;
+// }
+//
+// inputbar {
+//   background-color: @bg-alt;
+//   text-color: @peach;
+// }
+//
+// textbox-prompt-colon {
+//   text-color: @peach;
+// }
+//
+// listview {
+//   background-color: @bg;
+//   text-color: @fg;
+// }
+//
+// element {
+//   background-color: @bg;
+//   text-color: @fg;
+// }
+//
+// element selected {
+//   background-color: @selected;
+//   text-color: @fg;
+// }
+//
+// element urgent {
+//   background-color: @urgent;
+//   text-color: #e0def4;
+// }
+//
+// element active {
+//   background-color: @active;
+//   text-color: #232136;
+// }
+//
+// scrollbar {
+//   handle-color: @scrollbar;
+//   handle-width: 5px;
+// }
+//
+// message {
+//   background-color: @bg-alt;
+//   text-color: @fg;
+// }
+//
+// textbox {
+//   text-color: @peach;
+// }
+//
+// button {
+//   background-color: @bg-alt;
+//   text-color: @fg;
+// }
+//
+// button selected {
+//   background-color: @selected;
+//   text-color: @fg;
+// }
+//

@@ -13,7 +13,7 @@ dynamic_padding = true
 opacity = 0.9
 
 [colors.primary]
-background = "#232136"
+background = "#000000"
 foreground = "#e0def4"
 
 # [colors.normal]
