@@ -36,6 +36,7 @@ return {
                 "gopls",
                 "clangd",
                 "pyright",
+                "ts_ls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -56,6 +57,11 @@ return {
                                 }
                             }
                         }
+                    }
+                end,
+                ["tsserver"] = function()
+                    require("lspconfig").tsserver.setup {
+                        capabilities = capabilities,
                     }
                 end,
             }
@@ -93,11 +99,6 @@ return {
                 header = "",
                 prefix = "",
             },
-        })
-        require('lspconfig').clangd.setup({
-            cmd = { vim.fn.stdpath("data") .. "/mason/bin/clangd" },
-            capabilities = capabilities,
-            root_dir = require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
         })
     end
 }
