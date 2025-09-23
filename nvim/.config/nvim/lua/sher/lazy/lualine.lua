@@ -2,11 +2,11 @@ return
 {
     'nvim-lualine/lualine.nvim',
     name = "lualine",
-    dependencies = { 'nvim-tree/nvim-web-devicons' }, -- for icons
+    -- dependencies = { 'nvim-tree/nvim-web-devicons' }, -- for icons
     config = function()
         require('lualine').setup {
             options = {
-                icons_enabled = true,
+                icons_enabled = false,
                 theme = 'auto',
                 disabled_filetypes = {
                     statusline = {},
