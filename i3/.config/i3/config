@@ -187,7 +187,7 @@ bar {
 }
 
 # set background wallpaper
-exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/arch2.jpg"
+exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/arch3.jpg"
 
 # enabling greenclip daemon before screenshot so that screenshot get's copied to the clipboard
 exec_always --no-startup-id greenclip daemon
@@ -217,7 +217,7 @@ bindsym $mod+Shift+Q exec i3lock -n
 exec --no-startup-id xautolock -time 5 -locker "i3lock -n"
 
 exec_always --no-startup-id sh -c 'xrandr | grep -q "DP-1 connected" && \
-  xrandr --output DP-1 --primary --left-of eDP-1 --auto'
+  xrandr --output DP-1 --primary --right-of eDP-1 --auto'
 
 
 # # polybar setup
