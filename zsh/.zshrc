@@ -146,7 +146,7 @@ function greenclip() {
     echo "Stopping Greenclip..."
     pkill greenclip 2>/dev/null
     echo "Deleting history..."
-    rm -f ~/.cache/greenclip/history
+    rm -f ~/.cache/greenclip.history
     echo "Restarting Greenclip..."
     nohup greenclip daemon > /dev/null 2>&1 &
     echo "Greenclip history cleared."
