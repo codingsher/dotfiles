@@ -187,7 +187,7 @@ bar {
 }
 
 # set background wallpaper
-exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/arch3.jpg"
+exec_always --no-startup-id feh --bg-scale "/home/sher/Pictures/archBTW/arch.jpg"
 
 # enabling greenclip daemon before screenshot so that screenshot get's copied to the clipboard
 exec_always --no-startup-id greenclip daemon
