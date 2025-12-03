@@ -34,7 +34,11 @@ sudo pacman -S --noconfirm --needed \
     clang20 \
     gcc \
     make \
-    docker
+    docker \
+    acpi \
+    vlc \
+    thunar \
+    postgresql \
 
 echo "=== Essential packages ==="
 
