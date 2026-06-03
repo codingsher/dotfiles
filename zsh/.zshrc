@@ -160,5 +160,5 @@ function greenclip() {
 export PATH="$HOME/.cargo/bin:$PATH"
 
 alias vim=nvim
-alias php="/opt/lampp/bin/php"
 
+export PATH="$HOME/.local/bin:$PATH"
