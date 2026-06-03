@@ -157,29 +157,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# # rose-pine-moon colouring
-# # Format: border background text indicator child_border
-# client.focused          #f6c177 #232136 #e0def4 #f6c177 #232136
-# client.focused_inactive #393552 #232136 #908caa #393552 #232136
-# client.unfocused        #2a273f #232136 #6e6a86 #2a273f #232136
-# client.urgent           #eb6f92 #232136 #e0def4 #eb6f92 #232136
-# client.placeholder      #232136 #232136 #e0def4 #232136 #232136
 
 # my own bar
 bar {
     status_command i3status
     tray_output primary
-
-    # colors {
-    #     background #232136
-    #     statusline #e0def4
-    #     separator  #6e6a86
-    #
-    #     focused_workspace  #f4a491 #f4a491 #232136
-    #     active_workspace   #9ccfd8 #9ccfd8 #232136
-    #     inactive_workspace #2a273f #2a273f #e0def4
-    #     urgent_workspace   #eb6f92 #eb6f92 #e0def4
-    # }
 }
 
 # set background wallpaper
@@ -209,20 +191,16 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 # lockscreen
 bindsym $mod+Shift+Q exec i3lock -n
 
-exec_always --no-startup-id sh -c 'xrandr | grep -q "DP-1 connected" && \
-  xrandr --output DP-1 --primary --right-of eDP-1 --auto'
+exec_always --no-startup-id xrandr --output eDP-1 --auto
 
-exec_always --no-startup-id xrandr --output DP-1 --primary --auto --output eDP-1 --off
+# exec_always --no-startup-id xrandr --output DP-1 --primary --auto --output eDP-1 --off
+
+# exec_always --no-startup-id sh -c 'xrandr | grep -q "DP-1 connected" && \
+#   xrandr --output DP-1 --primary --right-of eDP-1 --auto'
 
 exec_always --no-startup-id xset s 300
 exec_always --no-startup-id xset dpms 0 0 600
 exec_always --no-startup-id xss-lock -- i3lock
-
-# exec_always --no-startup-id xset s 300
-# exec_always --no-startup-id xset dpms 0 0 600
-
-# # polybar setup
-# exec_always --no-startup-id sh -c "killall -q polybar; polybar top &"
 
 # picom
 # exec_always --no-startup-id picom &
