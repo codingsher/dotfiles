@@ -76,7 +76,7 @@ return {
                 end,
             },
             mapping = cmp.mapping.preset.insert({
-                ['<C-w>'] = cmp.mapping.select_prev_item(cmp_select),
+                ['<C-d>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-x>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-a>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
@@ -85,8 +85,8 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
-                { name = 'buffer' },
-            })
+                    { name = 'buffer' },
+                })
         })
 
         vim.diagnostic.config({
